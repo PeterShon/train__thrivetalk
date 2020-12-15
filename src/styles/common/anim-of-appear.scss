@@ -1,0 +1,71 @@
+/* anim-of-appear */
+.an-i {
+  &.an-subtitle-el {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 0.2s;
+    &:nth-child(1) { transition-delay: 0.3s; }
+    &:nth-child(2) { transition-delay: 0.6s; }
+    &:nth-child(3) { transition-delay: 0.9s; }
+    &.an-a {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  &.an-opacity {
+    opacity: 0;
+    transition: 0.9s;
+    &.an-a {
+      opacity: 1;
+    }
+  }
+  &.an-scaleimg {
+    transform: scale(1.1);
+    transition: 3s;
+    &.an-a {
+      transform: scale(1);
+    }
+  }
+  &.an-title {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.9s;
+    &.an-a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &.an-color-box {
+    @keyframes scale-dot {
+      from {transform: scale(1.5);}
+      50% {transform: scale(2);}
+      to {transform: scale(1);}
+      }
+    & .color-box__link {
+      transition: 0.3s;
+      &::before {
+        width: 0;
+      }
+    }
+    & .color-box__item {
+      transform: translateX(10px);
+      transition: 0.3s;
+      transition-delay: 0.3s;
+    }
+    &.an-a {
+      & .color-box__link {
+        &::before {
+          width: calc(100% - 14.58%*2);
+        }
+      }
+      & .color-box__item {
+        transform: translateX(0px);
+        &:before {
+          animation: scale-dot 0.3s;
+          animation-delay: 0.5s;
+        }
+      }
+    }
+  }
+}

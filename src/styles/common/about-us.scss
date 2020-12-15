@@ -1,0 +1,122 @@
+/* about-us */
+.about-us {
+  padding-bottom: 120px;
+  height: calc((25vw - var(--scrollbar-width) / 4) + 478px + 120px);
+  &__text-box {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 156px 7.4% 24px 7.4%;
+  }
+  &__title {
+    position: absolute;
+    align-self: flex-start;
+    margin: -3px 0 0;
+
+    letter-spacing: 1px;
+  }
+  &__text {
+    max-width: 592px;
+    margin: -11px 0 0;
+
+    letter-spacing: 0.1px;
+    line-height: 1.57;
+  }
+  &__pointer {
+    margin: 65px 0 0;
+
+    opacity: 0.5;
+
+    letter-spacing: 1px;
+  }
+  &__colors {
+    position: sticky;
+    top: calc(100% - (25vw/1.5 - var(--scrollbar-width) / 4));
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: calc(25vw - var(--scrollbar-width) / 4);
+  }
+  &__color-box {
+    flex: 1 0 25%;
+  }
+}
+
+@include media-tablet-horizontal {
+  .about-us {
+    padding-bottom: 60px;
+    height: calc((25vw - var(--scrollbar-width) / 4) + 360px + 120px);
+    &__text-box {
+      padding: 80px 7.4% 24px 7.4%;
+    }
+    &__title {
+      align-self: center;
+      position: relative;
+      margin: 0;
+    }
+    &__text {
+      margin: 20px 0 0 ;
+    }
+    &__pointer {
+      margin-top: 40px;
+    }
+  }
+}
+
+
+@include media-tablet {
+  .about-us {
+    height: calc((100vw - var(--scrollbar-width) / 2) + 400px + 120px);
+    &__title {
+      align-self: center;
+      position: relative;
+      margin: 0;
+    }
+    &__colors {
+      flex-wrap: wrap;
+      top: calc(100% - (50vw/1.5 - var(--scrollbar-width) / 2));
+      height: calc(100vw - var(--scrollbar-width));
+    }
+    &__color-box {
+      flex: 1 0 50%;
+      height: calc(50vw - var(--scrollbar-width) / 2);
+    }
+  }
+}
+
+
+@include media-custom(580px) {
+  .about-us {
+    height: calc((100vw - var(--scrollbar-width) / 2) + 450px + 120px);
+    &__text-box {
+      padding: 40px 5% 20px 5%;
+    }
+  }
+}
+
+@include media-mobile {
+  .about-us {
+    height: auto;
+    padding-bottom: 40px;
+    &__text-box {
+      position: relative;
+      padding: 40px 5% 20px 5%;
+    }
+    &__text {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    &__colors {
+      height: auto;
+      position: relative;
+      top: auto;
+    }
+    &__color-box {
+      flex: 1 0 100%;
+      height: calc(60vw - var(--scrollbar-width));
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@mixin text($fw, $fst) {
+  font-weight: $fw;
+  font-style: $fst;
+}
+/* text */
+.text {
+  font-family: "Larsseit", regular;
+  &_1n { @include text(100, normal) };
+  &_3n { @include text(300, normal) };
+  &_4n { @include text(400, normal) };
+  &_5n { @include text(500, normal) };
+  &_7n { @include text(700, normal) };
+  &_8n { @include text(800, normal) };
+
+  &_nn { font-size: 23px; }
+  &_14 { font-size: 14px; }
+  &_16 { font-size: 16px; }
+  &_20 { font-size: 20px; }
+  &_23 { font-size: 23px; }
+  &_24 { font-size: 24px; }
+  &_28 { font-size: 28px; }
+  &_32 { font-size: 32px; }
+  &_36 { font-size: 36px; }
+  &_47 { font-size: 47px; }
+  &_64 { font-size: 64px; }
+}

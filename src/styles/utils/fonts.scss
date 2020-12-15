@@ -1,0 +1,10 @@
+// Файл для подключения нестандартных шрифтов
+@import "../mixins/fonts";
+
+@include font("Larsseit", "Larsseit-Thin", "100", "normal");
+@include font("Larsseit", "Larsseit-Light", "300", "normal");
+@include font("Larsseit", "Larsseit", "400", "normal");
+@include font("Larsseit", "Larsseit-Medium", "500", "normal");
+@include font("Larsseit", "Larsseit-Bold", "700", "normal");
+@include font("Larsseit", "Larsseit-ExtraBold", "800", "normal");
+

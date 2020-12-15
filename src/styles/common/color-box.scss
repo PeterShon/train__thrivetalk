@@ -1,0 +1,93 @@
+/* color-box */
+.color-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $creamPink;
+  &__main-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__additional-img {
+    position: absolute;
+    left: 35.9%;
+    top: 30.3%;
+    width: 52.5%;
+    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  &__link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 19.72% 14.58% 0;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(100% - 14.58%*2);
+      height: 1px;
+      background-color: $white;
+
+      transition: 0.3s;
+      .color-box:hover & {
+        height: 10px;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    margin: 9.5% 0 0;
+
+    transition: 0.3s;
+    &:before {
+      content: '';
+      margin-top: 4%;
+      margin-right: 6%;
+      margin-left: 0.7%;
+      padding: 1.77%;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: $lightOrange;
+      transition: 0.3s;
+      .color-box:hover & {
+        transform: scale(0.8) translateY(20%) translateX(-5%);
+      }
+    }
+    .color-box:hover & {
+      transform: scale(1.1) translateX(4.5%);
+    }
+  }
+  &_lime {background-color: $lime;}
+  &_skyblue {background-color: $skyBlue;}
+  &_blue {background-color: $blue;}
+  &_darkblue {background-color: $darkBlue;}
+  &_lilac {background-color: $lilac;}
+  &_violet {background-color: $violet;}
+}
+
+@include media-tablet-horizontal {
+  .color-box {
+    &__item {
+      font-size: 24px;
+    }
+  }
+}
+
+@include media-tablet {
+  .color-box {
+    &__additional-img {
+      position: absolute;
+      left: 35.9%;
+      top: 15.3%;
+      width: 52.5%;
+      transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+  }
+}

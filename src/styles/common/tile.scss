@@ -1,0 +1,39 @@
+/* tile */
+.tile {
+  &__colors {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc((33.3335vw - var(--scrollbar-width) / 3)*2);
+  }
+  &__color-box {
+    flex: 1 0 33.3333%;
+    height: 50%;
+  }
+}
+
+@include media-tablet {
+  .tile {
+    &__colors {
+      width: 100%;
+      height: calc((50vw - var(--scrollbar-width) / 2)*3);
+    }
+    &__color-box {
+      flex: 1 0 50%;
+      height: 33.3335%;
+    }
+  }
+}
+
+@include media-tablet {
+  .tile {
+    &__colors {
+      width: 100%;
+      height: calc((60vw - var(--scrollbar-width))*6);
+    }
+    &__color-box {
+      flex: 1 0 100%;
+      height: calc(100% / 6);
+    }
+  }
+}

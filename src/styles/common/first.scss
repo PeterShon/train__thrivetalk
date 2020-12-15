@@ -1,0 +1,164 @@
+/* first */
+.first {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+
+  border-bottom: 2px solid $white;
+  &__box {
+    flex: 0 1 77.6%;
+    padding: 228px 32.6% 75px 12.4%;
+
+    background-color: $cream;
+  }
+  &__header {
+    color: $skyBlue;
+  }
+  &__title {
+    margin-top: 36px;
+    letter-spacing: -1.15px;
+    line-height: 1.28;
+  }
+  &__description {
+    margin-top: 56px;
+    line-height: 1.93;
+  }
+  &__whoami {
+    display: inline-block;
+    margin-top: 26px;
+    padding: 15px 30px 15px 30px;
+
+    background-color: $orange;
+
+    color: $white;
+    letter-spacing: 1.8px;
+    
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__whatdoido {
+    display: inline-block;
+    margin-top: 26px;
+    margin-left: 8px;
+    padding: 12px 27px 12px 27px;
+
+    border: 3px solid transparent;
+
+    color: $orange;
+    letter-spacing: 1.8px;
+
+    transition: 0.3s;
+    &:hover {
+      border: 3px solid $orange;
+    }
+  }
+  &__ellipse {
+    position: absolute;
+    overflow: hidden;
+    width: 807.71px;
+    height: 544.93px;
+    border-radius: 312.16px;
+    &_blue {
+      background-color: $lightBlue;
+      top: 45px;
+      right: -140px;
+
+      transform: rotate(-60deg);
+    }
+    &_img {
+      top: 110px;
+      right: -150px;
+
+      transform: rotate(-31deg);
+    }
+  }
+  &__ellipse-inner {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 18% 0%;
+    
+    transform: rotate(31deg) scale(1.38) translateY(-5px);
+  }
+}
+
+@include media-custom(1410px) {
+  .first {
+    &__box {
+      flex: 0 1 80%;
+      padding: 120px 21% 50px 8%;
+    }
+    &__ellipse {
+      width: 35vw;
+      height: 30vw;
+
+      border-radius: 0;
+
+      transform: rotate(0deg);
+      &_blue {
+        display: none;
+      }
+      &_img {
+        top: 200px;
+        right: 0px;
+      }
+    }
+    &__ellipse-inner {
+      object-fit: cover;
+      object-position: 0% 0%;
+      
+      transform: rotate(0deg) scale(1) translateY(0);
+    }
+  }
+}
+
+@include media-tablet-horizontal {
+  .first {
+    display: flex;
+    flex-direction: column;
+    &__box {
+      padding: 120px 9.097% 50px 12.43%;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__ellipse {
+      position: relative;
+      width: 100%;
+      height: 60vw;
+      top: auto;
+      right: auto;
+    }
+    &__ellipse-inner {
+      object-position: center 60%;
+    }
+  }
+}
+
+@include media-mobile {
+  .first {
+    &__header {
+      display: none;
+    }
+    &__box {
+      padding: 60px 3% 30px 3%;
+    }
+    &__title {
+      margin-top: 0;
+      font-size: 28px;
+    }
+    &__description {
+      margin-top: 20px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    &__whoami, &__whatdoido {
+      margin-top: 0;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+}

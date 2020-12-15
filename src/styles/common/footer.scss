@@ -1,0 +1,129 @@
+/* footer */
+.footer {
+  &__header {
+    display: flex;
+    overflow: hidden;
+  }
+  &__img-box {
+    overflow: hidden;
+    flex: 1 0 39.5835%;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__info-box {
+    flex: 1 0 60.4165%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 101px 8.335% 74px 4.72%;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0 0 calc((100% - 1px * 2 - 13.875% * 2) * 0.333335);
+  }
+  &__vertical-line {
+    flex: 0 0 1px;
+    align-self: flex-end;
+    height: 83%;
+    background-color: $black;
+    opacity: .02;
+  }
+  &__column-title {
+    line-height: 0.76;
+    margin: 0 0 54px 0;
+  }
+  &__column-paragraph {
+    opacity: 0.5;
+    line-height: 1.75;
+    margin: 0;
+  }
+  &__phone {
+    color: $darkBlue;
+    opacity: 0.5;
+    margin-top: 27px;
+    transition: 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__mail {
+    margin-top: 8px;
+    color: $linkBlue;
+  }
+  &__copyright {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: $skyBlue;
+    padding-left: 12.43%;
+  }
+  &__copyright-badge {
+    margin: 4px 9px 0 0;
+    color: $white;
+  }
+  &__copyright-text {
+    color: $white;
+    letter-spacing: 0.18px;
+  }
+}
+
+@include media-laptop {
+  .footer {
+    &__info-box {
+      padding: 70px 6% 50px 3%;
+    }
+    &__column {
+      flex: 0 0 calc((100% - 1px * 2 - 3% * 2) * 0.333335);
+    }
+  }
+}
+
+@include media-custom(1180px) {
+  .footer {
+    &__img-box {
+      flex: 1 0 40%;
+    }
+    &__info-box {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 10px 6% 10px 3%;
+      flex: 1 0 60%;
+    }
+    &__column {
+      flex: 0 0 auto;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    &__column-title {
+      margin-bottom: 10px;
+    }
+    &__phone {
+      margin: 0;
+    }
+  }
+}
+
+@include media-mobile {
+  .footer {
+    &__header {
+      flex-wrap: wrap;
+    }
+    &__img-box {
+      order: 2;
+      flex: 1 0 100%;
+    }
+    &__info-box {
+      order: 1;
+      flex: 1 0 100%;
+      margin-top: 10px;
+    }
+  }
+}
