@@ -1,7 +1,7 @@
 # TRAINING PROJECT
 ## NAME: THRIVETALK
 Screen:
-![Альтернативный текст](THRIVETALK.png)
+![Альтернативный текст](thrivetalk.png)
 Languages: 
 * HTML;
 * CSS;
